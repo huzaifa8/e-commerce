@@ -26,17 +26,19 @@
             </div>
             <div class="flex-r product-container">
                 {% for product in products %}
+                {% if product.site.id == 2 %}
                 <div class="products flex-c">
                     <div class="img-container"><img src="{{product.img.url}}" alt=""></div>
                     <div class="info-container flex-c">
-                        <span class="name">{{product.brand}} {{product.name}}</span>
+                        <span class="name">{{product.name}} {{product.site}}</span>
                         <div class="price-container flex-r">
-                            <span class="price">{{product.price}}$ <span></span></span>
+                            <span class="price">{{product.price}}$<span></span></span>
                             <span class="rating">4 <span class="rating-icon"><i class="far fa-star"></i></span></span>
                         </div>
                         <button class="site-btn">Go to site<span class="icon"><i class="fa fa-chevron-right" aria-hidden="true"></i></span></button>
                     </div>
                 </div>
+                {% endif %}
                 {% endfor %}
             </div>
         </div>
@@ -45,17 +47,19 @@
             <div class="title">Title placeholder</div>
             <div class="flex-r product-container">
                 {% for product in products %}
+                {% if product.site.id == 3 %}
                 <div class="products flex-c">
                     <div class="img-container"><img src="{{product.img.url}}" alt=""></div>
                     <div class="info-container flex-c">
-                        <span class="name">{{product.brand}} {{product.name}}</span>
+                        <span class="name">{{product.name}} {{product.site}}</span>
                         <div class="price-container flex-r">
-                            <span class="price">{{product.price}}$ <span></span></span>
+                            <span class="price">{{product.price}}$<span></span></span>
                             <span class="rating">4 <span class="rating-icon"><i class="far fa-star"></i></span></span>
                         </div>
                         <button class="site-btn">Go to site<span class="icon"><i class="fa fa-chevron-right" aria-hidden="true"></i></span></button>
                     </div>
                 </div>
+                {% endif %}
                 {% endfor %}
             </div>
         </div>
