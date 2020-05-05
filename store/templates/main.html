@@ -12,18 +12,45 @@
 </head>
 
 <body>
-<div class="flex-c">
+<header class="flex-r">
+    <div class="logo-container">
+        <img class="logo" src="{% static 'images/logo.png'%}" alt="">
+    </div>
     <div class="filter-container">
         <form class="filter" method="get">
             {{filter.form}}
             <button class="filter-btn" type="submit">Search</button>
         </form>
     </div>
-    <div class="card-view flex-r">
-        <div class="left flex-c">
-            <div class="title">Title placeholder
-
+    <div class="user-info"></div>
+</header>
+<div class="main-container flex-r">
+    <div class="side-nav flex-c">
+            <div class="categories">
+                <i class="fas fa-list"></i> CATEGORIES
             </div>
+        <div class="categories-list">
+            <ul class="list">
+                <li><span>Women's Fashion</span><i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+                <li><span>Men's Fashion</span><i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+                <li><span>Phones & Telecommunications</span><i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+                <li><span>Computer, Office & Security</span><i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+                <li><span>Consumer Electronics</span><i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+                <li><span>Jewelery & Watches</span><i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+                <li><span>Home, Pet & Appliances</span><i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+                <li><span>Bags & Shoes</span><i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+                <li><span>Toys, Kids & Babies</span><i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+                <li><span>Outdoor Fun & Sports</span><i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+                <li><span>Beauty, Health & Hair</span><i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+                <li><span>Automobiles & Motorcycles</span><i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+                <li><span>Home Improvement & Tools</span><i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+            </ul>
+        </div>
+        </div>
+    <div class="card-view flex-r">
+
+        <div class="left flex-c">
+            <div class="title">Title placeholder</div>
             <div class="flex-r product-container">
                 {% for product in products %}
                 {% if product.site.id == 2 %}
@@ -33,7 +60,7 @@
                         <span class="name">{{product.name}} {{product.site}}</span>
                         <div class="price-container flex-r">
                             <span class="price">{{product.price}}$<span></span></span>
-                            <span class="rating">4 <span class="rating-icon"><i class="far fa-star"></i></span></span>
+                            <span class="rating flex-r">4 <span class="rating-icon"><i class="far fa-star"></i></span></span>
                         </div>
                         <button class="site-btn">Go to site<span class="icon"><i class="fa fa-chevron-right" aria-hidden="true"></i></span></button>
                     </div>
@@ -54,7 +81,7 @@
                         <span class="name">{{product.name}} {{product.site}}</span>
                         <div class="price-container flex-r">
                             <span class="price">{{product.price}}$<span></span></span>
-                            <span class="rating">4 <span class="rating-icon"><i class="far fa-star"></i></span></span>
+                            <span class="rating flex-r">4 <span class="rating-icon"><i class="far fa-star"></i></span></span>
                         </div>
                         <button class="site-btn">Go to site<span class="icon"><i class="fa fa-chevron-right" aria-hidden="true"></i></span></button>
                     </div>
@@ -63,9 +90,12 @@
                 {% endfor %}
             </div>
         </div>
-
     </div>
 </div>
+
+<footer>
+    hello
+</footer>
 
 </body>
 
